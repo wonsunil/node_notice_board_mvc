@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title index page
+    body
+        div(id="main")
+        -if(user)
+            p id: #{user.id}
+            p name: #{user.name}
+            a(href="/content/write") 글쓰기
+        -else
+            a(href="/user/login") 로그인
+            br
+            a(href="/user/register") 회원가입
