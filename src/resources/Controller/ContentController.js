@@ -8,7 +8,7 @@ const fs = require("fs");
 const contentService = require("../Service/ContentService")
 
 const User = require("../Model/User");
-const Content = require("../Model/content");
+const Content = require("../Model/Content");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -3,10 +3,10 @@ const session = require("express-session");
 const path = require("path");
 const app = express();
 
-const User = require("./Model/User");
+const User = require("./src/resources/Model/User");
 
-const userRouter = require("./Controller/UserController");
-const contentRouter = require("./Controller/ContentController");
+const userRouter = require("./src/resources/Controller/UserController");
+const contentRouter = require("./src/resources/Controller/ContentController");
 
 app.use(session({
     secret: "cat",
