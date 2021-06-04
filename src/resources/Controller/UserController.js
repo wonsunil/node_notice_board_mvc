@@ -4,7 +4,7 @@ const app = express();
 const userService = require("../Service/UserService");
 const User = require("../Model/User.js");
 
-const page = url => path.join(__dirname, `../src/pages/account/${url}.html`);
+const page = url => path.join(__dirname, `../../../src/pages/account/${url}.html`);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
