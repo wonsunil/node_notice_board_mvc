@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title content detail page
+    body
+        ul
+        -if(content === null)
+            li 존재하지 않는 게시글입니다
+            a(href = "/index") 돌아가기
+        -else
+            li #{content.title}
+            li #{content.writer}
+            textarea(readonly) #{content.content}
+            br
+        -if(images !== null)
+            ul
+            -for(let i = 0, limit = images.length; i < limit; i++)
+                img(src = `/image/contents/${content.id}/${images[0]}`)
+            br
+        -if(prev === null)
+            p 최신글입니다
+            br
+        -else
+            a(href = "/content/" + prev) 이전글
+        
+        -if(next === null)
+            p 마지막 글입니다
+        -else
+            a(href = "/content/" + next) 다음글

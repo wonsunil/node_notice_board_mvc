@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title content write page
+    body
+        form(action = "/content/write", method = "POST", enctype = "multipart/form-data")
+            input(name = "title", placeholder = "제목")
+            br
+            input(name = "writer", value = user.id, readonly)
+            br
+            textarea(name = "content" placeholder = "내용")
+            br
+            input(type = "file", name = "file")
+            button 등록
