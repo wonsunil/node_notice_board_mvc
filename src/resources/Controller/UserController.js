@@ -23,7 +23,7 @@ app.post("/login", async (req, res) => {
     const user = await userService.login(id, password);
 
     req.session.user = new User(...Object.values(user));
-    req.session.save(res.redirect("/"));
+    req.session.save(() => res.redirect("/"));
 });
 app.post("/register", (req, res) => res.redirect("/user/login"));
 
